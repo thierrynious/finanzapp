@@ -1,0 +1,573 @@
+2025-10-23T13:58:03.938+02:00  INFO 25168 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 25168 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:58:03.949+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:58:03.950+02:00  INFO 25168 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:58:04.011+02:00  INFO 25168 --- [FinanzApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-23T13:58:05.145+02:00  INFO 25168 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:58:05.228+02:00  INFO 25168 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:58:05.936+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:58:05.952+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:58:05.952+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:58:05.996+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:58:05.997+02:00  INFO 25168 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1984 ms
+2025-10-23T13:58:06.167+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:58:06.259+02:00  INFO 25168 --- [FinanzApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-23T13:58:06.309+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:58:06.636+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:58:06.673+02:00  INFO 25168 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-23T13:58:06.967+02:00  INFO 25168 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:58:06.969+02:00  INFO 25168 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-23T13:58:07.007+02:00  WARN 25168 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:58:07.033+02:00  INFO 25168 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:58:08.240+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T13:58:08.326+02:00  INFO 25168 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:58:08.655+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-23T13:58:09.303+02:00  WARN 25168 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T13:58:09.347+02:00  WARN 25168 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 77881387-a888-4271-ae10-e44e4ec5ad16
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T13:58:09.353+02:00  INFO 25168 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T13:58:09.596+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{GET [/api/accounts]}: getAllAccounts()
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{GET [/api/accounts/fail]}: failExample()
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+2025-10-23T13:58:09.610+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T13:58:09.614+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T13:58:09.617+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions]}: getAllTransactions()
+	{GET [/api/transactions/search]}: searchByTitle(String)
+	{POST [/api/transactions]}: createTransaction(Transaction)
+2025-10-23T13:58:09.619+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T13:58:09.624+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T13:58:09.628+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T13:58:09.640+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T13:58:09.723+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T13:58:09.760+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T13:58:09.761+02:00 TRACE 25168 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T13:58:09.762+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T13:58:09.815+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T13:58:09.879+02:00 DEBUG 25168 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T13:58:09.930+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T13:58:10.106+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-23T13:58:10.204+02:00  INFO 25168 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-23T13:58:10.231+02:00  INFO 25168 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Started FinanzAppApplication in 7.381 seconds (process running for 8.606)
+2025-10-23T13:58:28.673+02:00  INFO 25168 --- [FinanzApp] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-23T13:58:28.799+02:00  INFO 25168 --- [FinanzApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-23T13:58:28.805+02:00  INFO 25168 --- [FinanzApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:58:28.810+02:00  WARN 25168 --- [FinanzApp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T13:58:28.811+02:00  INFO 25168 --- [FinanzApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-23T13:58:28.812+02:00  INFO 25168 --- [FinanzApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-23T13:58:32.445+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 11588 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:58:32.457+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:58:32.459+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:58:32.514+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-23T13:58:33.262+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:58:33.315+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:58:33.789+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:58:33.801+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:58:33.803+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:58:33.844+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:58:33.845+02:00  INFO 11588 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1329 ms
+2025-10-23T13:58:33.982+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:58:34.024+02:00  INFO 11588 --- [FinanzApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-23T13:58:34.054+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:58:34.284+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:58:34.308+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-23T13:58:34.453+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:58:34.455+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-23T13:58:34.474+02:00  WARN 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:58:34.492+02:00  INFO 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:58:35.202+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T13:58:35.255+02:00  INFO 11588 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:58:35.515+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-23T13:58:36.049+02:00  WARN 11588 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T13:58:36.083+02:00  WARN 11588 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 61977db1-31ad-407d-8897-3e164e99cadf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T13:58:36.089+02:00  INFO 11588 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T13:58:36.235+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+	{GET [/api/accounts]}: getAllAccounts()
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{GET [/api/accounts/fail]}: failExample()
+2025-10-23T13:58:36.243+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T13:58:36.245+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T13:58:36.246+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions/search]}: searchByTitle(String)
+	{GET [/api/transactions]}: getAllTransactions()
+	{POST [/api/transactions]}: createTransaction(Transaction)
+2025-10-23T13:58:36.247+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T13:58:36.250+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T13:58:36.251+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T13:58:36.260+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T13:58:36.337+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T13:58:36.353+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T13:58:36.354+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T13:58:36.354+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T13:58:36.383+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T13:58:36.429+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T13:58:36.475+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T13:58:36.598+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-23T13:58:36.635+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-23T13:58:36.647+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Started FinanzAppApplication in 4.827 seconds (process running for 5.921)
+2025-10-23T13:59:17.801+02:00  INFO 11588 --- [FinanzApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-23T13:59:17.806+02:00  INFO 11588 --- [FinanzApp] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-23T13:59:17.950+02:00  INFO 11588 --- [FinanzApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-23T13:59:17.958+02:00  INFO 11588 --- [FinanzApp] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:17.967+02:00  WARN 11588 --- [FinanzApp] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T13:59:17.969+02:00  INFO 11588 --- [FinanzApp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-23T13:59:17.971+02:00  INFO 11588 --- [FinanzApp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-23T13:59:18.095+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 11588 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:59:18.095+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:59:18.096+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:59:18.365+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:59:18.387+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:59:18.529+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:59:18.529+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:59:18.530+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:59:18.560+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:59:18.561+02:00  INFO 11588 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 463 ms
+2025-10-23T13:59:18.626+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:59:18.630+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:59:18.645+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:59:18.646+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-23T13:59:18.650+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:59:18.650+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-23T13:59:18.651+02:00  WARN 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:59:18.652+02:00  INFO 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:59:18.772+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T13:59:18.786+02:00  INFO 11588 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:18.991+02:00  WARN 11588 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T13:59:19.008+02:00  WARN 11588 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3f189547-5610-4867-a855-977ed4d0e077
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T13:59:19.010+02:00  INFO 11588 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T13:59:19.064+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+	{GET [/api/accounts]}: getAllAccounts()
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{GET [/api/accounts/fail]}: failExample()
+2025-10-23T13:59:19.072+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T13:59:19.074+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T13:59:19.077+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions/search]}: searchByTitle(String)
+	{GET [/api/transactions]}: getAllTransactions()
+	{POST [/api/transactions]}: createTransaction(Transaction)
+2025-10-23T13:59:19.080+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T13:59:19.094+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T13:59:19.098+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T13:59:19.107+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T13:59:19.161+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T13:59:19.167+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T13:59:19.169+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T13:59:19.171+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T13:59:19.182+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T13:59:19.214+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T13:59:19.240+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T13:59:19.284+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-23T13:59:19.321+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-23T13:59:19.373+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Started FinanzAppApplication in 1.329 seconds (process running for 48.648)
+2025-10-23T13:59:19.379+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-23T13:59:20.579+02:00  INFO 25144 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 25144 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:59:20.599+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:59:20.602+02:00  INFO 25144 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:59:20.690+02:00  INFO 25144 --- [FinanzApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-23T13:59:20.747+02:00  INFO 11588 --- [FinanzApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-23T13:59:20.763+02:00  INFO 11588 --- [FinanzApp] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-23T13:59:21.009+02:00  INFO 11588 --- [FinanzApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-23T13:59:21.017+02:00  INFO 11588 --- [FinanzApp] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:21.018+02:00  WARN 11588 --- [FinanzApp] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T13:59:21.020+02:00  INFO 11588 --- [FinanzApp] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-23T13:59:21.025+02:00  INFO 11588 --- [FinanzApp] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-23T13:59:21.159+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 11588 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:59:21.160+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:59:21.162+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:59:21.593+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:59:21.619+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:59:21.809+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:59:21.810+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:59:21.811+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:59:21.846+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:59:21.846+02:00  INFO 11588 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2025-10-23T13:59:21.940+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:59:21.951+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:59:21.961+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:59:21.963+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-23T13:59:21.966+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:59:21.967+02:00  INFO 11588 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-23T13:59:21.967+02:00  WARN 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:59:21.968+02:00  INFO 11588 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:59:22.071+02:00  INFO 25144 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:59:22.156+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T13:59:22.169+02:00  INFO 11588 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:22.221+02:00  INFO 25144 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:59:22.384+02:00  WARN 11588 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T13:59:22.402+02:00  WARN 11588 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 77ad2a63-784a-44c7-a285-b63ada99c46d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T13:59:22.403+02:00  INFO 11588 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T13:59:22.480+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+	{GET [/api/accounts]}: getAllAccounts()
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{GET [/api/accounts/fail]}: failExample()
+2025-10-23T13:59:22.485+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T13:59:22.487+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T13:59:22.490+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions/search]}: searchByTitle(String)
+	{GET [/api/transactions]}: getAllTransactions()
+	{POST [/api/transactions]}: createTransaction(Transaction)
+2025-10-23T13:59:22.495+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T13:59:22.499+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T13:59:22.502+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T13:59:22.511+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T13:59:22.552+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T13:59:22.559+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T13:59:22.559+02:00 TRACE 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T13:59:22.560+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T13:59:22.574+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T13:59:22.589+02:00 DEBUG 11588 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T13:59:22.623+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T13:59:22.681+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-23T13:59:22.709+02:00  INFO 11588 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-23T13:59:22.717+02:00  INFO 11588 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Started FinanzAppApplication in 1.618 seconds (process running for 51.992)
+2025-10-23T13:59:22.722+02:00  INFO 11588 --- [FinanzApp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-23T13:59:23.279+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:59:23.302+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:59:23.304+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:59:23.382+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:59:23.384+02:00  INFO 25144 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2692 ms
+2025-10-23T13:59:23.710+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:59:23.808+02:00  INFO 25144 --- [FinanzApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-23T13:59:23.873+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:59:24.387+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:59:24.462+02:00  INFO 25144 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-23T13:59:24.748+02:00  INFO 25144 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:59:24.751+02:00  INFO 25144 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-23T13:59:24.795+02:00  WARN 25144 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:59:24.828+02:00  INFO 25144 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:59:25.990+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T13:59:26.056+02:00  INFO 25144 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:26.430+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-23T13:59:27.630+02:00  WARN 25144 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T13:59:27.688+02:00  WARN 25144 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9116249d-bd96-4652-8340-b9f9a119b23b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T13:59:27.702+02:00  INFO 25144 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T13:59:28.028+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{GET [/api/accounts]}: getAllAccounts()
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{GET [/api/accounts/fail]}: failExample()
+2025-10-23T13:59:28.047+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T13:59:28.053+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T13:59:28.056+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions]}: getAllTransactions()
+	{POST [/api/transactions]}: createTransaction(Transaction)
+	{GET [/api/transactions/search]}: searchByTitle(String)
+2025-10-23T13:59:28.061+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T13:59:28.068+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T13:59:28.073+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T13:59:28.088+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T13:59:28.189+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T13:59:28.214+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T13:59:28.214+02:00 TRACE 25144 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T13:59:28.215+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T13:59:28.283+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T13:59:28.361+02:00 DEBUG 25144 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T13:59:28.412+02:00  INFO 25144 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T13:59:28.605+02:00  WARN 25144 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-10-23T13:59:28.660+02:00  WARN 25144 --- [FinanzApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-23T13:59:28.665+02:00  INFO 25144 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T13:59:28.677+02:00  WARN 25144 --- [FinanzApp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T13:59:28.679+02:00  INFO 25144 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-23T13:59:28.700+02:00  INFO 25144 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-23T13:59:28.735+02:00  INFO 25144 --- [FinanzApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-23T13:59:28.871+02:00 ERROR 25144 --- [FinanzApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-10-23T13:59:54.841+02:00  INFO 24816 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Starting FinanzAppApplication using Java 17.0.15 with PID 24816 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2025-10-23T13:59:54.858+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-10-23T13:59:54.862+02:00  INFO 24816 --- [FinanzApp] [restartedMain] c.f.finanzapp.FinanzAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-10-23T13:59:54.945+02:00  INFO 24816 --- [FinanzApp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-23T13:59:56.191+02:00  INFO 24816 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-23T13:59:56.317+02:00  INFO 24816 --- [FinanzApp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
+2025-10-23T13:59:57.449+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-23T13:59:57.474+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-23T13:59:57.475+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-23T13:59:57.559+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-23T13:59:57.560+02:00  INFO 24816 --- [FinanzApp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2612 ms
+2025-10-23T13:59:57.911+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-23T13:59:58.009+02:00  INFO 24816 --- [FinanzApp] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-23T13:59:58.076+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-23T13:59:58.587+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-23T13:59:58.651+02:00  INFO 24816 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-23T13:59:58.954+02:00  INFO 24816 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-10-23T13:59:58.958+02:00  INFO 24816 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-23T13:59:58.994+02:00  WARN 24816 --- [FinanzApp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-23T13:59:59.030+02:00  INFO 24816 --- [FinanzApp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-23T13:59:59.981+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-23T14:00:00.052+02:00  INFO 24816 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T14:00:00.468+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-23T14:00:01.706+02:00  WARN 24816 --- [FinanzApp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-23T14:00:01.777+02:00  WARN 24816 --- [FinanzApp] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 28e7c25f-d4ad-4f09-9952-82f1ffbaf0e8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-23T14:00:01.793+02:00  INFO 24816 --- [FinanzApp] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-23T14:00:02.101+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.BankAccountController:
+	{GET [/api/accounts/{id}]}: get(Long)
+	{DELETE [/api/accounts/{id}]}: delete(Long)
+	{POST [/api/accounts/{id}/withdraw]}: withdraw(Long,double)
+	{POST [/api/accounts/{id}/deposit]}: deposit(Long,double)
+	{POST [/api/accounts]}: createAccount(BankAccount)
+	{GET [/api/accounts]}: getAllAccounts()
+	{GET [/api/accounts/fail]}: failExample()
+2025-10-23T14:00:02.116+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.CategoryController:
+	{PUT [/api/categories/{id}]}: update(Long,Category)
+	{DELETE [/api/categories/{id}]}: delete(Long)
+	{POST [/api/categories]}: create(Category)
+	{GET [/api/categories]}: getAll()
+	{GET [/api/categories/{id}]}: getById(Long)
+2025-10-23T14:00:02.120+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.HelloController:
+	{POST [/ || ]}: create(Transaction)
+	{GET [/hello]}: hello()
+2025-10-23T14:00:02.124+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.TransactionController:
+	{GET [/api/transactions/{id}]}: getById(Long)
+	{GET [/api/transactions/search]}: searchByTitle(String)
+	{GET [/api/transactions]}: getAllTransactions()
+	{POST [/api/transactions]}: createTransaction(Transaction)
+2025-10-23T14:00:02.126+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.f.f.c.UserController:
+	{POST [/api/users]}: register(User)
+	{GET [/api/users]}: getUserByUsername(String)
+2025-10-23T14:00:02.131+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-10-23T14:00:02.134+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 22 mappings in 'requestMappingHandlerMapping'
+2025-10-23T14:00:02.148+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-10-23T14:00:02.246+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-10-23T14:00:02.274+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-10-23T14:00:02.275+02:00 TRACE 24816 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-23T14:00:02.276+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-23T14:00:02.337+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-23T14:00:02.442+02:00 DEBUG 24816 --- [FinanzApp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-23T14:00:02.492+02:00  INFO 24816 --- [FinanzApp] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-10-23T14:00:02.717+02:00  WARN 24816 --- [FinanzApp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-10-23T14:00:02.747+02:00  WARN 24816 --- [FinanzApp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-23T14:00:02.752+02:00  INFO 24816 --- [FinanzApp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T14:00:02.760+02:00  WARN 24816 --- [FinanzApp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T14:00:02.762+02:00  INFO 24816 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-23T14:00:02.766+02:00  INFO 24816 --- [FinanzApp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-23T14:00:02.794+02:00  INFO 24816 --- [FinanzApp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-23T14:00:02.826+02:00 ERROR 24816 --- [FinanzApp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-10-23T14:00:43.526+02:00  INFO 11588 --- [FinanzApp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-23T14:00:43.528+02:00  INFO 11588 --- [FinanzApp] [Thread-12] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-23T14:00:43.778+02:00  INFO 11588 --- [FinanzApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-23T14:00:43.788+02:00  INFO 11588 --- [FinanzApp] [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-23T14:00:43.790+02:00  WARN 11588 --- [FinanzApp] [Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-10-23T14:00:43.790+02:00  INFO 11588 --- [FinanzApp] [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-23T14:00:43.800+02:00  INFO 11588 --- [FinanzApp] [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.

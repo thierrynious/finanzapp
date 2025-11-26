@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: finanzapp-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: finanzdb
+      POSTGRES_USER: finanzuser
+      POSTGRES_PASSWORD: finanzpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  finanzapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: finanzapp-backend
+    depends_on:
+      - postgres
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/finanzdb
+      SPRING_DATASOURCE_USERNAME: finanzuser
+      SPRING_DATASOURCE_PASSWORD: finanzpass
+
+volumes:
+  postgres-data:

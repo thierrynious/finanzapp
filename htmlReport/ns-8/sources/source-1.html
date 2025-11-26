@@ -1,0 +1,104 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > UserRepository</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.finanzmanager.finanzapp.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: UserRepository (com.finanzmanager.finanzapp.repository)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">UserRepository</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.finanzmanager.finanzapp.repository;
+&nbsp;
+&nbsp;import com.finanzmanager.finanzapp.models.User;
+&nbsp;import org.springframework.data.jpa.repository.*;
+&nbsp;import org.springframework.data.repository.query.Param;
+&nbsp;import org.springframework.stereotype.Repository;
+&nbsp;
+&nbsp;import java.time.LocalDateTime;
+&nbsp;import java.util.*;
+&nbsp;
+&nbsp;@Repository
+&nbsp;public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+&nbsp;
+&nbsp;    Optional&lt;User&gt; findByUsername(String username);
+&nbsp;
+&nbsp;    @Query(&quot;SELECT u FROM User u WHERE u.email = :email&quot;)
+&nbsp;    Optional&lt;User&gt; findByEmail(@Param(&quot;email&quot;) String email);
+&nbsp;
+&nbsp;    boolean existsByEmail(String email);
+&nbsp;
+&nbsp;    @Query(&quot;SELECT u FROM User u WHERE u.createdAt &gt; ?1&quot;)
+&nbsp;    List&lt;User&gt; findCreatedAfter(LocalDateTime time);
+&nbsp;
+&nbsp;    @Query(&quot;SELECT u FROM User u WHERE u.username = :username&quot;)
+&nbsp;    Optional&lt;User&gt; loadByUsername(@Param(&quot;username&quot;) String username);
+&nbsp;
+&nbsp;    @Query(value = &quot;SELECT * FROM users WHERE email = ?1&quot;, nativeQuery = true)
+&nbsp;    Optional&lt;User&gt; findNativeByEmail(String email);
+&nbsp;
+&nbsp;    @Query(&quot;SELECT u.id AS id, u.username AS name FROM User u&quot;)
+&nbsp;    List&lt;Map&lt;String, Object&gt;&gt; findAllSimplifiedUsers();
+&nbsp;
+&nbsp;    @Modifying
+&nbsp;    @Query(&quot;UPDATE User u SET u.isActive = false WHERE u.id = :id&quot;)
+&nbsp;    int deactivateUser(@Param(&quot;id&quot;) Long id);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-10-31 21:29</div>
+</div>
+</body>
+</html>
