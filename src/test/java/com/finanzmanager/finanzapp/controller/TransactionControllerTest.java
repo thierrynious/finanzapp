@@ -5,6 +5,7 @@ import com.finanzmanager.finanzapp.models.Transaction;
 import com.finanzmanager.finanzapp.service.TransactionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
@@ -23,8 +24,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ActiveProfiles("test")
-@WebMvcTest(controllers = TransactionController.class)
-@Import(TestSecurityConfig.class) // <-- Security im Test deaktiviert
+@WebMvcTest(
+        controllers = TransactionController.class,
+        excludeAutoConfiguration = {
+                org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
+                org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration.class
+        }
+)
+@AutoConfigureMockMvc(addFilters = false)
+@Import(TestSecurityConfig.class)
 class TransactionControllerTest {
 
     @Autowired

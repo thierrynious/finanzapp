@@ -23,17 +23,22 @@ class TransactionServiceLoggingTest {
 
     @Test
     void should_log_warning_for_invalid_amount(CapturedOutput output) {
+
         Transaction tx = Transaction.builder()
                 .title("Testbuchung")
-                .amount(BigDecimal.ZERO)
+                .amount(BigDecimal.ZERO)   // invalid -> Service wirft Exception
                 .date(LocalDate.now())
                 .build();
 
-        service.save(tx);
+        // DER WICHTIGE FIX
+        org.junit.jupiter.api.Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> service.save(tx)
+        );
 
         assertThat(output.getOut())
                 .contains("WARN")
-                .contains("Ungültiger Betrag");
+                .contains("Ungültiger oder fehlender Betrag");
     }
 }
 
