@@ -24,15 +24,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ActiveProfiles("test")
-@WebMvcTest(
-        controllers = TransactionController.class,
-        excludeAutoConfiguration = {
-                org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
-                org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration.class
-        }
-)
-@AutoConfigureMockMvc(addFilters = false)
-@Import(TestSecurityConfig.class)
+@WebMvcTest(controllers = TransactionController.class)
+@AutoConfigureMockMvc(addFilters = false)  // Security komplett aus
+@Import(TestSecurityConfig.class)          // eigenes Security-Mock-Konfig
 class TransactionControllerTest {
 
     @Autowired

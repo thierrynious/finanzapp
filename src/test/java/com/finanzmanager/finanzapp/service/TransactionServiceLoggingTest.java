@@ -13,11 +13,13 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @TestPropertySource(properties = "spring.jpa.properties.javax.persistence.validation.mode=none")
 @ExtendWith(OutputCaptureExtension.class)
 class TransactionServiceLoggingTest {
+
     @Autowired
     TransactionService service;
 
@@ -26,20 +28,16 @@ class TransactionServiceLoggingTest {
 
         Transaction tx = Transaction.builder()
                 .title("Testbuchung")
-                .amount(BigDecimal.ZERO)   // invalid -> Service wirft Exception
+                .amount(BigDecimal.ZERO) // INVALID -> expected exception
                 .date(LocalDate.now())
                 .build();
 
-        // DER WICHTIGE FIX
-        org.junit.jupiter.api.Assertions.assertThrows(
-                IllegalArgumentException.class,
-                () -> service.save(tx)
-        );
+        // ✔ WICHTIG: Exception MUSS erwartet werden
+        assertThrows(IllegalArgumentException.class, () -> service.save(tx));
 
+        // ✔ Testet zusätzlich das Logging
         assertThat(output.getOut())
                 .contains("WARN")
                 .contains("Ungültiger oder fehlender Betrag");
     }
 }
-
-
