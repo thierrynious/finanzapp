@@ -1,98 +1,129 @@
 package com.finanzmanager.finanzapp.service;
 
-import com.finanzmanager.finanzapp.config.AppProperties;
+import com.finanzmanager.finanzapp.dto.DashboardDTO;
+import com.finanzmanager.finanzapp.dto.TransactionDTO;
 import com.finanzmanager.finanzapp.models.Transaction;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
-import jakarta.annotation.PostConstruct;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Optional;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
+@Transactional
 public class TransactionService {
 
     private final TransactionRepository repository;
-    private final AppProperties appProperties;
-    private static final Logger log = LoggerFactory.getLogger(TransactionService.class);
 
-    // Konstruktor
-    public TransactionService(TransactionRepository repository, AppProperties appProperties) {
-        this.repository = repository;
-        this.appProperties = appProperties;
+    // ==========================
+    // DASHBOARD
+    // ==========================
+    public DashboardDTO getDashboard() {
+
+        List<Transaction> list = repository.findAll();
+
+        BigDecimal income = list.stream()
+                .filter(Transaction::isIncome)
+                .map(Transaction::getAmount)
+                .filter(Objects::nonNull)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal expenses = list.stream()
+                .filter(tx -> !tx.isIncome())
+                .map(Transaction::getAmount)
+                .filter(Objects::nonNull)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal balance = income.subtract(expenses);
+
+        List<TransactionDTO> latest = list.stream()
+                .sorted(Comparator.comparing(Transaction::getDate).reversed())
+                .limit(5)
+                .map(tx -> TransactionDTO.builder()
+                        .id(tx.getId())
+                        .title(tx.getTitle())
+                        .amount(tx.getAmount())
+                        .date(tx.getDate())
+                        .income(tx.isIncome())
+                        .note(tx.getNote())
+                        .createdBy(tx.getCreatedBy())
+                        .updatedBy(tx.getUpdatedBy())
+                        .createdAt(tx.getCreatedAt())
+                        .updatedAt(tx.getUpdatedAt())
+                        .build()
+                )
+                .collect(Collectors.toList());
+
+        return DashboardDTO.builder()
+                .balance(balance)
+                .totalIncome(income)
+                .totalExpenses(expenses)
+                .latestTransactions(latest)
+                .build();
     }
 
-    // Wird direkt nach der Bean-Erstellung aufgerufen
-    @PostConstruct
-    public void init() {
-        log.info("{}gestartet. Max. Transaktionen:{}, Währung:{}",
-                appProperties.getName(),
-                appProperties.getMaxTransactions(),
-                appProperties.getDefaultCurrency());
-    }
+    // ==========================
+    // SAVE
+    // ==========================
+    public Transaction save(Transaction tx) {
 
-    // get paged
-    public Page<Transaction> getPaged(Pageable pageable) {
-        return repository.findAll(pageable);
-    }
-
-    // get paged sorted
-    public Page<Transaction> getPagedSorted(int page, int size, Sort sort) {
-        Pageable pageable = PageRequest.of(page, size, sort);
-        return repository.findAll(pageable);
-    }
-
-    public Transaction save(Transaction transaction) {
-        if (transaction == null) {
-            throw new IllegalArgumentException("Transaction darf nicht null sein!");
+        if (tx.getAmount() == null) {
+            throw new IllegalArgumentException("Amount darf nicht null sein");
         }
 
-        if (transaction.getAmount() == null) {
-            log.error("Transaction '{}' hat keinen Betrag! Abbruch.", transaction.getTitle());
-            throw new IllegalArgumentException("Betrag darf nicht null sein!");
+        // ✅ EINZIGE REGEL
+        tx.setIncome(tx.getAmount().signum() > 0);
+
+        if (tx.getCreatedAt() == null) {
+            tx.setCreatedAt(LocalDateTime.now());
         }
 
-        if (transaction.getAmount().signum() <= 0) {
-            log.warn("Ungültiger oder fehlender Betrag: {}", transaction.getAmount());
-            throw new IllegalArgumentException("Betrag darf nicht null oder negativ sein");
+        tx.setUpdatedAt(LocalDateTime.now());
+
+        return repository.save(tx);
+    }
+
+
+    // ==========================
+    // DUPLIKATE
+    // ==========================
+    public List<Transaction> saveAllUnique(List<Transaction> parsedList) {
+
+        List<Transaction> saved = new ArrayList<>();
+        LocalDateTime now = LocalDateTime.now();
+
+        for (Transaction tx : parsedList) {
+
+            if (tx.getDate() == null || tx.getAmount() == null || tx.getTitle() == null) {
+                continue;
+            }
+
+            boolean exists = repository.existsByDateAndAmountAndTitle(
+                    tx.getDate(),
+                    tx.getAmount().abs(),
+                    tx.getTitle()
+            );
+
+            if (exists) continue;
+
+            tx.setAmount(tx.getAmount().abs());
+            tx.setCreatedAt(now);
+            tx.setUpdatedAt(now);
+
+            saved.add(repository.save(tx));
         }
-
-        log.info("Speichere Transaktion: {}", transaction);
-        return repository.save(transaction);
+        return saved;
     }
 
-    public List<Transaction> getAll() {
-        return repository.findAll();
-    }
-
-    public Optional<Transaction> getById(Long id) {
-        return repository.findById(id);
-    }
-
-    public void delete(Long id) {
-        repository.deleteById(id);
-    }
-
-    public List<Transaction> searchByTitle(String keyword) {
-        return repository.findByTitleContainingIgnoreCase(keyword);
-    }
-
-    public List<Transaction> filterByDate(LocalDate from, LocalDate to) {
-        return repository.findByDateBetween(from, to);
-    }
-
-    public List<Transaction> getIncomes() {
-        return repository.findByIsIncome(true);
-    }
-
-    public List<Transaction> getExpenses() {
-        return repository.findByIsIncome(false);
+    public List<Transaction> findPossibleDuplicates(Transaction tx) {
+        return repository.findPossibleDuplicates(
+                tx.getDate(),
+                tx.getAmount().abs()
+        );
     }
 }

@@ -1,6 +1,8 @@
 package com.finanzmanager.finanzapp.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -11,14 +13,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class TransactionDTO {
+
     private Long id;
     private String title;
     private BigDecimal amount;
     private LocalDate date;
-    private boolean isIncome;
+
+    // ✅ Fix: JSON heißt sicher "isIncome" (Frontend nutzt tx.isIncome)
+    @JsonProperty("isIncome")
+    private boolean income;
+
     private String note;
 
-    // 🔹 Audit-Felder für Swagger sichtbar
     private String createdBy;
     private String updatedBy;
     private LocalDateTime createdAt;
