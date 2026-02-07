@@ -1,5 +1,6 @@
 package com.finanzmanager.finanzapp.service;
 
+import com.finanzmanager.finanzapp.exception.TransactionNotFoundException;
 import com.finanzmanager.finanzapp.model.Transaction;
 import com.finanzmanager.finanzapp.repository.TransactionRepository;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class TransactionService {
     }
 
     public Transaction getById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElseThrow(() -> new TransactionNotFoundException(id));
     }
 
     public List<Transaction> searchByTitle(String title) {

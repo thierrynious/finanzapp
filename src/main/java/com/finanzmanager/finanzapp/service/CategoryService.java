@@ -1,5 +1,6 @@
 package com.finanzmanager.finanzapp.service;
 
+import com.finanzmanager.finanzapp.exception.CategoryNotFoundException;
 import com.finanzmanager.finanzapp.model.Category;
 import com.finanzmanager.finanzapp.model.CategoryType;
 import com.finanzmanager.finanzapp.repository.CategoryRepository;
@@ -27,7 +28,7 @@ public class CategoryService {
     // read nach id
     public Category getCategoryById(Long id) {
         return categoryRepository
-                .findById(id).orElseThrow(()->new RuntimeException("Kategorie mit ID"+id+" nicht gefunden"));
+                .findById(id).orElseThrow(()->new CategoryNotFoundException(id));
     }
 
     // get by type
@@ -53,7 +54,7 @@ public class CategoryService {
     //delete
     public void deleteCategory(Long id) {
         if (!categoryRepository.existsById(id)) {
-            throw new RuntimeException("Kategorie mit ID"+id+" nicht gefunden");
+            throw new CategoryNotFoundException(id);
         }
         categoryRepository.deleteById(id);
     }

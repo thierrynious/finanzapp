@@ -34,8 +34,8 @@ public class CategoryController {
 
     //read nach id
     @GetMapping("/{id}")
-    public ResponseEntity<Category> getCategoryById(@PathVariable Long id) {
-        return ResponseEntity.ok(categoryService.getCategoryById(id));
+    public Category getCategoryById(@PathVariable Long id) {
+        return categoryService.getCategoryById(id);
     }
 
     // Nach Type

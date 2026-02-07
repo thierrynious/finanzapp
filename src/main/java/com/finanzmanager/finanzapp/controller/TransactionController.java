@@ -35,13 +35,8 @@ public class TransactionController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Transaction> getById(@PathVariable long id) {
-        Transaction found = service.getById(id);
-        if (found != null) {
-            return ResponseEntity.ok(found); // 200 ok
-        }else {
-            return ResponseEntity.notFound().build(); //404
-        }
+    public Transaction getById(@PathVariable long id) {
+        return service.getById(id);
     }
 
     @GetMapping("/search")
