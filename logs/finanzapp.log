@@ -1,22 +1,16 @@
-2026-02-07T10:18:59.141+01:00  INFO 28644 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 28644 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
-2026-02-07T10:18:59.145+01:00 DEBUG 28644 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-02-07T10:18:59.146+01:00  INFO 28644 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-02-07T10:18:59.196+01:00  INFO 28644 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-07T10:18:59.197+01:00  INFO 28644 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-07T10:18:59.944+01:00  INFO 28644 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-07T10:19:00.037+01:00  INFO 28644 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
-2026-02-07T10:19:00.638+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-02-07T10:19:00.661+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-07T10:19:00.662+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-07T10:19:00.705+01:00  INFO 28644 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1508 ms
-2026-02-07T10:19:00.891+01:00  INFO 28644 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-07T10:19:01.003+01:00  INFO 28644 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-07T10:19:01.532+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-07T10:19:01.568+01:00  INFO 28644 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-07T10:19:01.804+01:00  INFO 28644 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-07T10:19:01.806+01:00  INFO 28644 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-07T10:19:01.832+01:00  WARN 28644 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-07T10:19:01.852+01:00  INFO 28644 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-02-09T11:28:31.563+01:00  INFO 14908 --- [finanzapp] [main] c.f.f.s.TransactionServiceLoggingTest    : Starting TransactionServiceLoggingTest using Java 21.0.9 with PID 14908 (started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
+2026-02-09T11:28:31.567+01:00 DEBUG 14908 --- [finanzapp] [main] c.f.f.s.TransactionServiceLoggingTest    : Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-02-09T11:28:31.568+01:00  INFO 14908 --- [finanzapp] [main] c.f.f.s.TransactionServiceLoggingTest    : No active profile set, falling back to 1 default profile: "default"
+2026-02-09T11:28:32.326+01:00  INFO 14908 --- [finanzapp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-09T11:28:32.385+01:00  INFO 14908 --- [finanzapp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2026-02-09T11:28:32.829+01:00  INFO 14908 --- [finanzapp] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-09T11:28:32.928+01:00  INFO 14908 --- [finanzapp] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-09T11:28:33.491+01:00  INFO 14908 --- [finanzapp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-09T11:28:33.528+01:00  INFO 14908 --- [finanzapp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-09T11:28:33.727+01:00  INFO 14908 --- [finanzapp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-09T11:28:33.729+01:00  INFO 14908 --- [finanzapp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-09T11:28:33.760+01:00  WARN 14908 --- [finanzapp] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-09T11:28:33.785+01:00  INFO 14908 --- [finanzapp] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:testdb]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -28,114 +22,13 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-07T10:19:02.891+01:00  INFO 28644 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-07T10:19:02.960+01:00  INFO 28644 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-07T10:19:03.053+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-07T10:19:03.924+01:00  WARN 28644 --- [finanzapp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-07T10:19:04.252+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-02-07T10:19:04.319+01:00  INFO 28644 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-02-07T10:19:04.324+01:00  INFO 28644 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 5.797 seconds (process running for 7.221)
-2026-02-07T10:19:35.754+01:00  INFO 28644 --- [finanzapp] [http-nio-8081-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-07T10:19:35.755+01:00  INFO 28644 --- [finanzapp] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-07T10:19:35.756+01:00  INFO 28644 --- [finanzapp] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-02-07T10:19:36.014+01:00  WARN 28644 --- [finanzapp] [http-nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.finanzmanager.finanzapp.model.User> com.finanzmanager.finanzapp.controller.UserController.register(com.finanzmanager.finanzapp.model.User): [Field error in object 'user' on field 'password': rejected value [geh]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,8]; default message [Passwort muss mindestens 8 Zeichen haben]] ]
-2026-02-07T10:20:01.997+01:00  WARN 28644 --- [finanzapp] [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.finanzmanager.finanzapp.model.User> com.finanzmanager.finanzapp.controller.UserController.register(com.finanzmanager.finanzapp.model.User): [Field error in object 'user' on field 'password': rejected value [geh]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,8]; default message [Passwort muss mindestens 8 Zeichen haben]] ]
-2026-02-07T10:20:21.714+01:00  INFO 28644 --- [finanzapp] [http-nio-8081-exec-6] c.f.finanzapp.service.UserService        : Starte registrierung für User:max
-2026-02-07T10:20:21.721+01:00  INFO 28644 --- [finanzapp] [http-nio-8081-exec-6] c.f.finanzapp.service.UserService        : User erfolgreich registrert mit ID 1
-2026-02-07T10:22:39.427+01:00  WARN 28644 --- [finanzapp] [http-nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.finanzmanager.finanzapp.model.User> com.finanzmanager.finanzapp.controller.UserController.register(com.finanzmanager.finanzapp.model.User) with 3 errors: [Field error in object 'user' on field 'username': rejected value []; codes [NotBlank.user.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username]]; default message [Username darf nicht leer sein]] [Field error in object 'user' on field 'username': rejected value []; codes [Size.user.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username],50,3]; default message [Username muss zwischen 3 und 50 Zeichen haben]] [Field error in object 'user' on field 'email': rejected value [max@]; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@2d059bf2,.*]; default message [Bitte eine gültige E-Mail-Adresse angeben]] ]
-2026-02-07T10:27:42.015+01:00  INFO 28644 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-07T10:27:42.033+01:00  INFO 28644 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-02-07T10:27:42.040+01:00  INFO 28644 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-07T10:27:42.046+01:00  WARN 28644 --- [finanzapp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
-2026-02-07T10:27:42.046+01:00  INFO 28644 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-02-07T10:27:42.047+01:00  INFO 28644 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-02-07T10:27:44.306+01:00  INFO 14664 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 14664 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
-2026-02-07T10:27:44.308+01:00 DEBUG 14664 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-02-07T10:27:44.309+01:00  INFO 14664 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-02-07T10:27:44.347+01:00  INFO 14664 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-07T10:27:44.348+01:00  INFO 14664 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-07T10:27:44.929+01:00  INFO 14664 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-07T10:27:44.974+01:00  INFO 14664 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
-2026-02-07T10:27:45.423+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-02-07T10:27:45.434+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-07T10:27:45.434+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-07T10:27:45.466+01:00  INFO 14664 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1118 ms
-2026-02-07T10:27:45.579+01:00  INFO 14664 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-07T10:27:45.621+01:00  INFO 14664 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-07T10:27:45.997+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-07T10:27:46.026+01:00  INFO 14664 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-07T10:27:46.183+01:00  INFO 14664 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-07T10:27:46.185+01:00  INFO 14664 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-07T10:27:46.206+01:00  WARN 14664 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-07T10:27:46.231+01:00  INFO 14664 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:mem:testdb]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: TESTDB/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-07T10:27:47.036+01:00  INFO 14664 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-07T10:27:47.089+01:00  INFO 14664 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-07T10:27:47.154+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-07T10:27:47.825+01:00  WARN 14664 --- [finanzapp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-07T10:27:48.077+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-02-07T10:27:48.121+01:00  INFO 14664 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-02-07T10:27:48.125+01:00  INFO 14664 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 4.233 seconds (process running for 5.174)
-2026-02-07T10:28:29.808+01:00  INFO 14664 --- [finanzapp] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-07T10:28:29.808+01:00  INFO 14664 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-07T10:28:29.810+01:00  INFO 14664 --- [finanzapp] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-02-07T10:28:30.087+01:00  INFO 14664 --- [finanzapp] [http-nio-8081-exec-1] c.f.finanzapp.service.UserService        : Starte registrierung für User:max
-2026-02-07T10:28:30.095+01:00  INFO 14664 --- [finanzapp] [http-nio-8081-exec-1] c.f.finanzapp.service.UserService        : User erfolgreich registrert mit ID 1
-2026-02-07T10:29:04.062+01:00  WARN 14664 --- [finanzapp] [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.finanzmanager.finanzapp.model.User> com.finanzmanager.finanzapp.controller.UserController.register(com.finanzmanager.finanzapp.model.User) with 3 errors: [Field error in object 'user' on field 'email': rejected value [max@]; codes [Email.user.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@78479b5c,.*]; default message [Bitte eine gültige E-Mail-Adresse angeben]] [Field error in object 'user' on field 'username': rejected value []; codes [Size.user.username,Size.username,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username],50,3]; default message [Username muss zwischen 3 und 50 Zeichen haben]] [Field error in object 'user' on field 'username': rejected value []; codes [NotBlank.user.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.username,username]; arguments []; default message [username]]; default message [Username darf nicht leer sein]] ]
-2026-02-07T11:33:36.597+01:00  WARN 14664 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m49s462ms813µs400ns).
-2026-02-07T12:01:23.507+01:00  WARN 14664 --- [finanzapp] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m46s823ms596µs900ns).
-2026-02-07T15:11:52.420+01:00  INFO 25376 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Starting FinanzappApplication using Java 21.0.9 with PID 25376 (C:\Udemy Kurs Spring Boot\finanzapp\target\classes started by Dell in C:\Udemy Kurs Spring Boot\finanzapp)
-2026-02-07T15:11:52.422+01:00 DEBUG 25376 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
-2026-02-07T15:11:52.422+01:00  INFO 25376 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-02-07T15:11:52.453+01:00  INFO 25376 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-07T15:11:52.453+01:00  INFO 25376 --- [finanzapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-07T15:11:52.925+01:00  INFO 25376 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-07T15:11:52.963+01:00  INFO 25376 --- [finanzapp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
-2026-02-07T15:11:53.380+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-02-07T15:11:53.397+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-07T15:11:53.397+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-07T15:11:53.437+01:00  INFO 25376 --- [finanzapp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 984 ms
-2026-02-07T15:11:53.562+01:00  INFO 25376 --- [finanzapp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-07T15:11:53.653+01:00  INFO 25376 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-07T15:11:54.054+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-07T15:11:54.084+01:00  INFO 25376 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-07T15:11:54.253+01:00  INFO 25376 --- [finanzapp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-07T15:11:54.254+01:00  INFO 25376 --- [finanzapp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-07T15:11:54.289+01:00  WARN 25376 --- [finanzapp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-07T15:11:54.310+01:00  INFO 25376 --- [finanzapp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:h2:mem:testdb]
-	Database driver: H2 JDBC Driver
-	Database dialect: H2Dialect
-	Database version: 2.4.240
-	Default catalog/schema: TESTDB/PUBLIC
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: 100
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-07T15:11:55.108+01:00  INFO 25376 --- [finanzapp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-07T15:11:55.167+01:00  INFO 25376 --- [finanzapp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-07T15:11:55.233+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-07T15:11:55.855+01:00  WARN 25376 --- [finanzapp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-07T15:11:56.084+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-02-07T15:11:56.135+01:00  INFO 25376 --- [finanzapp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-02-07T15:11:56.137+01:00  INFO 25376 --- [finanzapp] [restartedMain] c.f.finanzapp.FinanzappApplication       : Started FinanzappApplication in 4.142 seconds (process running for 4.933)
-2026-02-07T15:12:23.615+01:00  INFO 25376 --- [finanzapp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-07T15:12:23.633+01:00  INFO 25376 --- [finanzapp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-02-07T15:12:23.637+01:00  INFO 25376 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-07T15:12:23.642+01:00  WARN 25376 --- [finanzapp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
-Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
-2026-02-07T15:12:23.642+01:00  INFO 25376 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-02-07T15:12:23.643+01:00  INFO 25376 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-09T11:28:34.677+01:00  INFO 14908 --- [finanzapp] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-09T11:28:34.741+01:00  INFO 14908 --- [finanzapp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09T11:28:34.848+01:00  INFO 14908 --- [finanzapp] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-09T11:28:35.761+01:00  WARN 14908 --- [finanzapp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-09T11:28:36.095+01:00  INFO 14908 --- [finanzapp] [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-02-09T11:28:36.188+01:00  INFO 14908 --- [finanzapp] [main] c.f.f.s.TransactionServiceLoggingTest    : Started TransactionServiceLoggingTest in 4.94 seconds (process running for 6.686)
+2026-02-09T11:28:36.678+01:00  INFO 14908 --- [finanzapp] [main] c.f.f.service.TransactionService         : Saving transaction Testbuchung
+2026-02-09T11:28:36.759+01:00  INFO 14908 --- [finanzapp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-09T11:28:36.761+01:00  INFO 14908 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-09T11:28:36.765+01:00  INFO 14908 --- [finanzapp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

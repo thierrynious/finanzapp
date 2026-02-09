@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Positive;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -16,6 +17,22 @@ import java.time.LocalDate;
 @Entity
 @Data
 public class Transaction {
+
+    public Transaction() {
+    }
+
+    public Transaction(String title, double amount, LocalDate date) {
+        this.title = title;
+        this.amount = amount;
+        this.date = date;
+    }
+
+    public Transaction(Long id, String title, double amount, LocalDate date) {
+        this.id = id;
+        this.title = title;
+        this.amount = amount;
+        this.date = date;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
